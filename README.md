@@ -3,3 +3,7 @@
 
 
 Estudio de complejidad computacional y las técnicas fundamentales de diseño de algoritmos: recurrencias, divide y vencer, ordenamiento, estructura de datos. 
+
+### Temario
+
+1. Fundamento de creación de versiones
