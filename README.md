@@ -6,4 +6,5 @@ Estudio de complejidad computacional y las técnicas fundamentales de diseño de
 
 ### Temario
 
-1. Fundamento de creación de versiones
+1. Fundamentos de control de versiones
+2. Fundamentos de python
