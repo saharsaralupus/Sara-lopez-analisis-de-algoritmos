@@ -1,0 +1,36 @@
+#Antes
+"""def CalcularPromedio(Lista):
+    s=0
+    for x in Lista:
+     s=s+x
+    return s/len(Lista)
+ 
+l=[1,2,3,4,5]
+print(CalcularPromedio(l))"""
+
+
+#Despues
+def calcular_promedio(numeros: list[float]) -> float:
+    """
+    Calcula el promedio de una lista de números.
+
+    Args:
+        numeros (List[float]): Lista de números.
+
+    Returns:
+        float: Promedio de los números.
+    """
+    if not numeros:
+        raise ValueError("La lista no puede estar vacía.")
+    
+    suma = sum(numeros)
+    promedio = suma / len(numeros)
+    return promedio
+
+def main() -> None:
+    """Punto de entrada del script."""
+    calcular_promedio([1, 2, 3, 4, 5])
+ 
+ 
+if __name__ == "__main__":
+    main()
