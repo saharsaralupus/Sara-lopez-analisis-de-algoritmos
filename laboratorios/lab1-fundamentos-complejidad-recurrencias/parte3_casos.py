@@ -53,7 +53,7 @@ plt.xlabel('Tamaño de entrada (n)')
 plt.ylabel('Número de Comparaciones')
 plt.grid(True)
 plt.legend()
-plt.savefig('graficas/parte3_comparaciones.png')
+plt.savefig('laboratorios/Lab_Fundamentos_Complejidad_Recurrencia/graficas/parte3_comparaciones.png')
 plt.close()
 
 # Gráfica 2: Tiempo vs Tamaño de entrada
@@ -66,7 +66,7 @@ plt.xlabel('Tamaño de entrada (n)')
 plt.ylabel('Tiempo (segundos)')
 plt.grid(True)
 plt.legend()
-plt.savefig('graficas/parte3_tiempo.png')
+plt.savefig('laboratorios/Lab_Fundamentos_Complejidad_Recurrencia/graficas/parte3_tiempo.png')
 plt.close()
 
 print("Experimento completado con éxito. Gráficas guardadas en graficas/")

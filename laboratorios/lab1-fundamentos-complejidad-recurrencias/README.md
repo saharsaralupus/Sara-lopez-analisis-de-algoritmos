@@ -36,8 +36,9 @@ Antes de realizar las mediciones experimentales, predigo que los escenarios de l
 ### Análisis de Resultados Empíricos (Parte 3)
 
 #### Gráficas de Rendimiento
-![Comparaciones vs Tamaño](graficas/parte3_comparaciones.png)
-![Tiempo de Ejecución vs Tamaño](graficas/parte3_tiempo.png)
+![Comparaciones vs Tamaño](laboratorios/Lab_Fundamentos_Complejidad_Recurrencia/graficas/parte3_comparaciones.png)
+![Tiempo de Ejecución vs Tamaño](laboratorios/Lab_Fundamentos_Complejidad_Recurrencia/graficas/parte3_tiempo.png)
+
 
 #### Diagnóstico de los Escenarios de Tamiza
 
