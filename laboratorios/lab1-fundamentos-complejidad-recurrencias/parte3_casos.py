@@ -1,6 +1,7 @@
 import os
 import time
 import matplotlib.pyplot as plt
+from pathlib import Path
 from datos import generar_aleatorio, generar_casi_ordenado, generar_inverso
 from algoritmos import insertion_sort
 from typing import Any
@@ -66,7 +67,11 @@ plt.xlabel('Tamaño de entrada (n)')
 plt.ylabel('Tiempo (segundos)')
 plt.grid(True)
 plt.legend()
-plt.savefig('laboratorios/Lab_Fundamentos_Complejidad_Recurrencia/graficas/parte3_tiempo.png')
+carpeta_actual = Path(__file__).resolve().parent
+ruta_grafica = carpeta_actual / "graficas" / "parte3_tiempo.png"
+plt.savefig(ruta_grafica)
+print(f"Gráfica generada: {ruta_grafica}")
+print("Gráfica generada: parte3_tiempo.png")
 plt.close()
 
 print("Experimento completado con éxito. Gráficas guardadas en graficas/")
