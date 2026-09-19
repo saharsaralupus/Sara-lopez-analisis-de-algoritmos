@@ -80,14 +80,15 @@ $T(n) = \Theta(n \log n)$
 
 Calculando a mano el costo pensando en el peor caso para Tamiza (que sería el Escenario C, donde todos los registros llegan exactamente al revés, de menor a mayor riesgo):
 
-  Línea |     Código                              | Veces que se ejecuta en el peor caso
-1       | for i in range(1, n):                   | n
-2       |     key = datos[i]                      | n - 1
-3       |     j = i - 1                           | n - 1
-4       |     while j >= 0 and datos[j] < key:    | n(n-1)/2
-5       |         datos[j + 1] = datos[j]         | n(n-1)/2
-6       |         j -= 1                          | n(n-1)/2
-7       |     datos[j + 1] = key                  | n - 1
+| Línea | Código | Veces que se ejecuta en el peor caso |
+|---:|---|---:|
+| 1 | `for i in range(1, n):` | `n` |
+| 2 | `key = datos[i]` | `n - 1` |
+| 3 | `j = i - 1` | `n - 1` |
+| 4 | `while j >= 0 and datos[j] < key:` | `n(n - 1) / 2` |
+| 5 | `datos[j + 1] = datos[j]` | `n(n - 1) / 2` |
+| 6 | `j -= 1` | `n(n - 1) / 2` |
+| 7 | `datos[j + 1] = key` | `n - 1` |
 
 
 La clave de todo este cálculo está en el ciclo while de la línea 4. Como los datos están al revés, por cada elemento i que el algoritmo revisa, tiene que devolverse hasta el principio del arreglo para encontrar su posición correcta.
@@ -95,6 +96,7 @@ Esa sumatoria desde $1$ hasta $n-1$ da matemáticamente $\frac{n(n-1)}{2}$, que 
 
 La complejidad esperada: 
 
-  Algoritmo    | Mejor Caso    | Caso Promedio | Peor Caso
-Insertion Sort | $O(n)$        | $O(n^2)$      | O(n)
-Merge Sort     | $O(n \log n)$ | $O(n \log n)$ | $O(n \log n)$
+| Algoritmo | Mejor Caso | Caso Promedio | Peor Caso |
+|---|---|---|---|
+| Insertion Sort | `O(n)` | `O(n²)` | `O(n²)` |
+| Merge Sort | `O(n log n)` | `O(n log n)` | `O(n log n)` |
