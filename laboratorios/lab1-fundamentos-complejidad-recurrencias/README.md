@@ -80,7 +80,7 @@ $T(n) = \Theta(n \log n)$
 
 Calculando a mano el costo pensando en el peor caso para Tamiza (que sería el Escenario C, donde todos los registros llegan exactamente al revés, de menor a mayor riesgo):
 
-# Línea |     Código                              | Veces que se ejecuta en el peor caso
+  Línea |     Código                              | Veces que se ejecuta en el peor caso
 1       | for i in range(1, n):                   | n
 2       |     key = datos[i]                      | n - 1
 3       |     j = i - 1                           | n - 1
@@ -95,6 +95,6 @@ Esa sumatoria desde $1$ hasta $n-1$ da matemáticamente $\frac{n(n-1)}{2}$, que 
 
 La complejidad esperada: 
 
-# Algoritmo    | Mejor Caso    | Caso Promedio | Peor Caso
+  Algoritmo    | Mejor Caso    | Caso Promedio | Peor Caso
 Insertion Sort | $O(n)$        | $O(n^2)$      | O(n)
 Merge Sort     | $O(n \log n)$ | $O(n \log n)$ | $O(n \log n)$
