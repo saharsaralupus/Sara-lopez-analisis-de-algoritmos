@@ -14,7 +14,6 @@ def generar_aleatorio(n: int, semilla: int = 42) -> list[int]:
         Lista de n indices de riesgo enteros distintos, desordenada.
     """
     rng = random.Random(semilla)
-    # Población extendida para asegurar n enteros estrictamente únicos
     return rng.sample(range(0, n * 10), n)
 
 
@@ -33,7 +32,6 @@ def generar_casi_ordenado(n: int, semilla: int = 42) -> list[int]:
     rng = random.Random(semilla)
     pool = rng.sample(range(0, n * 10), n)
     
-    # El orden que el algoritmo produce es de mayor a menor
     pool.sort(reverse=True)
     
     n_98 = int(n * 0.98)
@@ -54,5 +52,4 @@ def generar_inverso(n: int) -> list[int]:
         Lista de n indices de riesgo enteros distintos, en el orden
         inverso al que el algoritmo debe producir.
     """
-    # El orden inverso al decreciente es de menor a mayor (creciente)
     return list(range(0, n))

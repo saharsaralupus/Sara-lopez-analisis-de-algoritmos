@@ -53,3 +53,48 @@ Tras ejecutar las pruebas experimentales controladas incrementando el volumen de
 Al confrontar las mediciones experimentales con las predicciones planteadas en la sección 3.1, se concluye que **los resultados empíricos coinciden con la predicción teórica**. 
 
 El experimento confirmó que el canal de origen de migración desde el sistema legado (Escenario C) representa el peor entorno operativo para Tamiza, mientras que el reproceso diario (Escenario B) mitiga el impacto del algoritmo permitiéndole actuar de manera casi lineal. Esto demuestra con datos matemáticos por qué el sistema colapsó en producción en las últimas semanas: al abrirse la cobertura de salud a nivel departamental, ingresaron flujos masivos con comportamiento aleatorio (Escenario A) e inverso (Escenario C), detonando la naturaleza cuadrática del código e incumpliendo de forma definitiva la ventana crítica de cuatro horas, lo cual confirma que el software no puede permanecer sin optimizarse.
+
+
+## Parte 4 — Complejidad de merge sort e insertion sort: cálculo y validación
+
+### 4.1 — Cálculo teórico 
+
+La ecuación de recurrencia para Merge Sort clásica: 
+    $$T(n) = 2T(n/2) + \Theta(n)$$
+
+Donde sale cada cosa: 
+
+- 2: Porque en cada páso partimos el arreglo en dos mitades. 
+- $T(n/2)$: Es el tamaño de esos dos nuevos subproblemas (cada mitad tiene la mitad de los datos, lógicamente).
+- $\Theta(n)$: Es lo que nos cuesta la fase de "combinar". Para mezclar dos listas ordenadas, el algoritmo tiene que recorrer todos los $n$ elementos comparándolos uno a uno.
+
+Para resolverla elegí el método maestro. Identificamos los valores:
+
+- $a = 2$ (las dos llamadas recursivas)
+- $b = 2$ (el factor por el que dividimos el problema)
+- $f(n) = \Theta(n)$ (el costo de la mezcla)
+
+Calculamos $n^{\log_b(a)}$, que sería $n^{\log_2(2)} = n^1 = n$.Al comparar, vemos que $f(n)$ es exactamente igual a $n^{\log_b(a)}$. Esto significa que caemos directo en la condición del Caso 2 del teorema maestro. Siguiendo la regla de este caso, simplemente multiplicamos el resultado por $\log n$, concluyendo que la complejidad final es:
+
+$T(n) = \Theta(n \log n)$
+
+Calculando a mano el costo pensando en el peor caso para Tamiza (que sería el Escenario C, donde todos los registros llegan exactamente al revés, de menor a mayor riesgo):
+
+# Línea |     Código                              | Veces que se ejecuta en el peor caso
+1       | for i in range(1, n):                   | n
+2       |     key = datos[i]                      | n - 1
+3       |     j = i - 1                           | n - 1
+4       |     while j >= 0 and datos[j] < key:    | n(n-1)/2
+5       |         datos[j + 1] = datos[j]         | n(n-1)/2
+6       |         j -= 1                          | n(n-1)/2
+7       |     datos[j + 1] = key                  | n - 1
+
+
+La clave de todo este cálculo está en el ciclo while de la línea 4. Como los datos están al revés, por cada elemento i que el algoritmo revisa, tiene que devolverse hasta el principio del arreglo para encontrar su posición correcta.
+Esa sumatoria desde $1$ hasta $n-1$ da matemáticamente $\frac{n(n-1)}{2}$, que es lo mismo que $\frac{n^2}{2} - \frac{n}{2}$.Si multiplicamos cada línea por una constante de tiempo imaginaria y sumamos todo, el término de mayor grado (el que crece más rápido y absorbe al resto) es el $n^2$. Omitiendo las constantes, el resultado final es $O(n^2)$.
+
+La complejidad esperada: 
+
+# Algoritmo    | Mejor Caso    | Caso Promedio | Peor Caso
+Insertion Sort | $O(n)$        | $O(n^2)$      | O(n)
+Merge Sort     | $O(n \log n)$ | $O(n \log n)$ | $O(n \log n)$

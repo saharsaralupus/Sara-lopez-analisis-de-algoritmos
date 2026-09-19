@@ -5,7 +5,7 @@ from datos import generar_aleatorio, generar_casi_ordenado, generar_inverso
 from algoritmos import insertion_sort
 from typing import Any
 
-# Configurar directorio de salida para gráficas
+
 os.makedirs("graficas", exist_ok=True)
 
 tamanos = [100, 200, 400, 800, 1600, 3200, 6400]
