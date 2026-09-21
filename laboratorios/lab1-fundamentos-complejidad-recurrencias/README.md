@@ -61,7 +61,7 @@ El experimento confirmó que el canal de origen de migración desde el sistema l
 
 ## Parte 4 — Complejidad de merge sort e insertion sort: cálculo y validación
 
-#### Código Parte 3: Implementación y Medición inicial
+#### Código Parte 4: Complejidad de merge sort e insertion sort
 * **Implementación base:** [Ver código de algoritmos.py (Merge sort)](algoritmos.py)
 * **Validación experimental:** [Ver código de parte4_complejidad.py](parte4_complejidad.py)
 
