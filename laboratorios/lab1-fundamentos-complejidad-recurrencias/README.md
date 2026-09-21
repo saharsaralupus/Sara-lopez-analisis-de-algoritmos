@@ -40,8 +40,8 @@ Antes de realizar las mediciones experimentales, predigo que los escenarios de l
 * **Validación experimental:** [Ver código de parte3_casos.py](parte3_casos.py)
 
 #### Gráficas de Rendimiento
-![Comparaciones vs Tamaño](laboratorios/lab1-fundamentos-complejidad-recurrencias/graficas/parte3_comparaciones.png)
-![Tiempo de Ejecución vs Tamaño](laboratorios/lab1-fundamentos-complejidad-recurrencias/graficas/parte3_tiempo.png)
+![Comparaciones vs Tamaño](./graficas/parte3_comparaciones.png)
+![Tiempo de Ejecución vs Tamaño](./graficas/parte3_tiempo.png)
 
 
 #### Diagnóstico de los Escenarios de Tamiza
@@ -110,7 +110,7 @@ La complejidad esperada:
 | Merge Sort | `O(n log n)` | `O(n log n)` | `O(n log n)` |
 
 #### Gráficas de Rendimiento
-![Comparaciones vs Tamaño](laboratorios/lab1-fundamentos-complejidad-recurrencias/graficas/parte4_tiempo.png)
+![Comparaciones vs Tamaño](./graficas/parte4_tiempo.png)
 
 ### 4.3 — Concepto técnico a la Secretaría de Salud
 
