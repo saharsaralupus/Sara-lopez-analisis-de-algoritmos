@@ -42,7 +42,7 @@
 **Lo que puede mejorar:**
 - `parte3_casos.py` se detiene con un error al guardar la gráfica de comparaciones, porque escribe en una carpeta con otro nombre (`Lab_Fundamentos_Complejidad_Recurrencia`) que no existe. Hay que usar rutas relativas a la carpeta del propio archivo, como hizo en el tiempo.
 - `generar_casi_ordenado` usa `list.sort()`; la regla pide no usar funciones de ordenamiento de Python, así que debe construir ese 98 % de otra forma.
-- Los archivos de las partes 3 y 4 tienen funciones sin type hints ni docstrings, y hay varios avisos de estilo PEP 8 (espacios al final de línea, líneas en blanco de más, imports sin ordenar).
+- Los archivos de las partes 3 y 4 tienen funciones sin type hints ni docstrings, y hay avisos de estilo PEP 8 (imports sin ordenar).
 
 ## 4. Calidad del análisis de las gráficas (11 / 20)
 **Lo que hizo bien:**
