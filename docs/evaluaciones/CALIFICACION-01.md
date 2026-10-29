@@ -11,9 +11,9 @@
 | Calidad de la explicación teórica | 21 / 25 |
 | Corrección de la implementación | 11 / 20 |
 | Calidad del análisis de las gráficas | 11 / 20 |
-| Documentación y organización del informe | 5 / 10 |
-| **Total** | **73 / 100** |
-| **Nota (0–5)** | **3.65** |
+| Documentación y organización del informe | 6 / 10 |
+| **Total** | **74 / 100** |
+| **Nota (0–5)** | **3.70** |
 
 ## 1. Corrección conceptual (25 / 25)
 **Lo que hizo bien:**
@@ -56,7 +56,7 @@
 - En 4.3 dice que insertion sort tardó 2,5 s con 10.000 registros, pero ese dato no aparece en su gráfica; todo dato citado debe poder verse en ella.
 - La extrapolación de merge sort no explica el razonamiento con `n log n`; solo da un resultado.
 
-## 5. Documentación y organización del informe (5 / 10)
+## 5. Documentación y organización del informe (6 / 10)
 **Lo que hizo bien:**
 - Carpeta del laboratorio en una ubicación aceptada, con los archivos y gráficas pedidos, imágenes que se ven y enlaces al código en cada parte.
 - Más de cinco commits con mensajes descriptivos.

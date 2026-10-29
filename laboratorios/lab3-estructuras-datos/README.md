@@ -22,6 +22,6 @@ En `estructuras.py` se implementaron `Nodo`, `ListaEnlazada` (con inserción al 
 El script `pruebas.py` verifica con `assert`:
 1. Casos borde en una lista vacía y una tabla vacía (`tamano == 0`, `factor_carga() == 0.0` y búsqueda que retorna `None`).
 2. Búsquedas exitosas e infructuosas sobre las cuatro guías del enunciado (`1000000010`, `1000000024`, `1000000017` y `1000000005`).
-3. La colisión forzada con $m = 7$: las guías `10`, `24` y `17` dan `hash(guia) == 3`, se encadenan en `casillas[3]` alcanzando longitud 3, se recuperan sus estados individuales sin pérdida y `factor_carga()` devuelve exactamente `3 / 7`.
+3. La colisión forzada con $m = 7$: las guías `10`, `24` y `17` dan `hash(guia) == 3`, se encadenan en `casillas[3]` alcanzando longitud 3, se recuperan sus estados individules sin pérdida y `factor_carga()` devuelve exactamente `3 / 7`.
 4. Veinticinco colecciones aleatorias (semilla fija `2026`, tamaños entre 10 y 150 y distintos $m$ primos) comprobando que `ListaEnlazada` y `TablaHash` coinciden en todas las guías existentes y en 30 guías inexistentes por colección.
 
